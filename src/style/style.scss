@@ -1,0 +1,60 @@
+@use './var.scss';
+
+html {
+	font-family: var.$font;
+	color: #1b1c21;
+	background-color: var.$background-1;
+}
+
+body {
+	font-family: var.$font;
+	max-width: 1440px;
+	background-color: var.$background-1;
+	font-weight: 400;
+	margin-left: auto;
+	margin-right: auto;
+	position: sticky;
+	
+}
+.main-content {
+	@media (min-width: 1120px) {
+		position: relative;
+		margin-left: 320px;
+	}
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 17px;
+	font-weight: 700;
+	font-size: 12px;
+	text-transform: uppercase;
+	background-color: var.$btn-pink;
+	width: 120px;
+	height: 32px;
+	border-radius: 16px;
+	color: var.$background-2;
+}
+
+.button:hover {
+        cursor: pointer;
+		transform: scale(1.05);
+		transition: 0.3s;
+}
+
+
+.brands::-webkit-scrollbar {
+	display: none;
+}
+
+.brands {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+button{
+	font-family: var.$font;
+}
+

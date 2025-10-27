@@ -1,0 +1,71 @@
+@use './var';
+
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-size: 100%;
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+ul li {
+	list-style: none;
+}
+
+button {
+	background-color: transparent;
+	cursor: pointer;
+}
+
+h2 {
+	font-size: 16px;
+	font-weight: 400;
+	color: #7e7e82;
+	text-transform: uppercase;
+	background-image: linear-gradient(-270deg, #f8f8f8 0%, #ffffff 90%);
+	padding-right: 16px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	border-top: var.$border-1;
+	display: block;
+	padding-left: 16px;
+
+	@media (min-width: 1120px) {
+		padding-left: var.$padding-desktop;
+	}
+}

@@ -1,0 +1,98 @@
+@use "./var";
+
+.menu {
+  background-color: var.$background-2;
+  height: 88px;
+  border-bottom: 1px solid #b8ffec;
+  padding-left: 16px;
+  display: flex;
+}
+@media (min-width: 1120px) {
+  .menu {
+    display: none;
+  }
+}
+
+.menu__left,
+.menu__right {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.menu__right {
+  justify-content: flex-end;
+}
+
+.call,
+.chat,
+.icon-profile {
+  display: none;
+}
+ 
+@media (min-width: 768px) {
+  .call,
+  .chat,
+  .icon-profile {
+    display: flex;
+  }
+
+  .burger::after,
+  .profile::after {
+    content: "";
+    width: 2px;
+    height: 32px;
+    background-color: #eaeaea;
+    border-radius: 1px;
+    margin-left: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+ 
+}
+
+.menu__icon {
+  display: flex;
+  margin-right: 16px;
+  background-color: transparent;
+}
+
+.icon__svg:hover,
+.icon__logo:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+.menu--desktop {
+  display: none;
+}
+@media (min-width: 1120px) {
+  .menu--desktop {
+    display: flex;
+    gap: 30px;
+    margin-left: auto;
+    margin-right: 25px;
+  }
+}
+
+.menu--desktop__button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  font-size: 16px;
+}
+
+.menu--desktop__button:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+.menu--desktop__link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #1b1c21;
+  text-decoration: none;
+}

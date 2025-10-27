@@ -1,0 +1,138 @@
+@use './var';
+
+.tech {
+	padding-left: 16px;
+	padding-top: 16px;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media (min-width: 768px) {
+		overflow-y: visible;
+		display: flex;
+		flex-wrap: wrap;
+		width: auto;
+        padding-left: 25px;
+	}
+
+	@media (min-width: 1120px) {
+		width: 1120px;
+		padding-top: 24px;
+		padding-left: var.$padding-desktop;
+	}
+
+	.tech__list {
+		display: flex;
+		gap: 16px;
+		width: 1440px;
+
+		@media (min-width: 768px) {
+			flex-wrap: wrap;
+			overflow: hidden;
+			height: 160px;
+		}
+
+		@media (min-width: 1120px) {
+			flex-wrap: wrap;
+			row-gap: 16px;
+			column-gap: 32px;
+			overflow: hidden;
+			height: 160px;
+		}
+
+		&--show {
+			@media (min-width: 768px) {
+				display: flex;
+				position: relative;
+				overflow: visible;
+				height: auto;
+				z-index: 1;
+			}
+		}
+	}
+
+	.tech__card {
+		display: flex;
+		height: 160px;
+		width: 240px;
+		justify-content: space-between;
+		background-color: var.$background-2;
+		align-items: center;
+		border: var.$border-2;
+		border-radius: 6px;
+		padding: 16px;
+    }
+		.tech__card:hover {
+			transform: scale(1.05);
+			transition: 0.2s;
+		}
+
+		.tech__card span {
+			font-weight: 500;
+			font-size: 16px;
+			align-self: flex-start;
+			text-align: start;
+		}
+
+		.tech__card img {
+			align-self: flex-end;
+		}
+	}
+
+
+.show {
+	display: none;
+
+	@media (min-width: 768px) {
+		display: flex;
+		align-items: center;
+		padding-top: 24px;
+		padding-bottom: 32px;
+		font-size: 16px;
+		font-weight: 500;
+		padding-left: 16px;
+		margin-left: 10px;
+		width: 170px;
+		gap: 10px;
+	}
+
+	@media (min-width: 1120px) {
+		padding-left: var.$padding-desktop;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	&:hover {
+		transform: scale(1.05);
+		transition: 0.2s;
+	}
+
+	.show__arrow {
+		display: inline-block;
+
+		&--up {
+			transform: rotate(180deg);
+		}
+	}
+
+	&__btn {
+		display: block;
+		font-weight: 500;
+
+		span:first-child {
+			display: inline-block;
+		}
+
+		span:last-child {
+			display: none;
+		}
+
+		&--active span:first-child {
+			display: none;
+		}
+
+		&--active span:last-child {
+			display: inline-block;
+		}
+	}
+}

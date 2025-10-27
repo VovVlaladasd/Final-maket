@@ -1,0 +1,9 @@
+import './index.html';
+import './index.scss';
+import './js/showBrands.js';
+import './js/swiper.js';
+import './js/showTech.js';
+import './js/feedback.js';
+import './js/call.js';
+import './js/readMore.js';
+import './js/left-burger.js';

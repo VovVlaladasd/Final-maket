@@ -1,0 +1,157 @@
+@use "./var";
+
+.burger-blur--active {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background-color: var.$background-2;
+  opacity: 0.96;
+}
+
+.left {
+  font-family: var.$font;
+  color: #1b1c21;
+  font-weight: 500;
+  min-width: 320px;
+  max-width: 360px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 15px 0 50px 0 rgb(134, 134, 134);
+  overflow-y: auto;
+  background-color: var.$background-2;
+  z-index: 4;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 32px;
+  display: none;
+  position: fixed;
+
+  &--visible {
+  display: block;
+}
+}
+
+@media (min-width: 1120px) {
+  .left {
+    display: block;
+    width: 320px;
+    box-shadow: none;
+  }
+}
+
+
+.close {
+  padding-right: 15px;
+}
+
+@media (min-width: 1120px) {
+  .close {
+    display: none;
+  }
+}
+
+.left__upper-menu {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-top: 24px;
+}
+
+.icon:hover,
+.logo:hover {
+  transform: scale(1.05);
+  transition: 0.1s;
+}
+
+.left__upper-menu_right {
+  display: flex;
+  align-items: center;
+}
+
+.left__upper-menu_left {
+  margin-left: auto;
+}
+
+.left__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+  line-height: 32px;
+  font-size: 16px;
+}
+
+.left__list_item:hover {
+  color: #7e7e82;
+}
+
+.left__list_item:hover::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  width: 3px;
+  height: 28px;
+  border: 2px solid #41f6d7;
+  border-radius: 2px;
+  
+}
+
+
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+a[href^="mailto:"] {
+  display: block;
+  color: #1b1c21;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+a[href^="tel:"] {
+  display: block;
+  text-decoration: none;
+  color: #1b1c21;
+  line-height: 32px;
+  font-size: 24px;
+  letter-spacing: 0.6px;
+  font-weight: 700;
+}
+
+a[href^="mailto:"]:hover {
+  transform: scale(1.05);
+  transition: 0.1s;
+}
+
+a[href^="tel:"]:hover {
+  transform: scale(1.05);
+  transition: 0.1s;
+}
+.contacts__buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.icon:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+.language__list {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+.language__item:hover {
+  opacity: 0.5;
+}
+.language__item:focus {
+  opacity: 0.5;
+}
+
